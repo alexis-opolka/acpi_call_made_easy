@@ -1,35 +1,48 @@
-A kernel simple module that enables you to call ACPI methods by writing the
+# ACPI_CALL - A Linux Kernel
+
+A simple kernel module that enables you to call ACPI methods by writing the
 method name followed by arguments to `/proc/acpi/call`.
+
+acpi_call is used from the terminal, if you're afraid or simply want a graphical experience, [see the dedicated section below](https://github.com/mkottman/acpi_call/#graphic-interface).
+
+## ⚠️ Caution ! ⚠️
 
 This module is to be considered a proof-of-concept and has been superseeded by
 projects like [bbswitch](https://github.com/Bumblebee-Project/bbswitch). It
 allows you to tamper with your system and should be used with caution.
 
-Want to use acpi_call via graphic interface? [Click here](https://github.com/mkottman/acpi_call/#graphic-interface)
-
-Usage:
-
-    echo '<call>' | sudo tee /proc/acpi/call
-
-You can then retrieve the result of the call by checking your dmesg or:
-
-    sudo cat /proc/acpi/call
-
-An example to turn off discrete graphics card in a dual graphics environment
-(like NVIDIA Optimus):
-
-    # turn off discrete graphics card
-    echo '\_SB.PCI0.PEG1.GFX0.DOFF' > /proc/acpi/call
-    # turn it back on
-    echo '\_SB.PCI0.PEG1.GFX0.DON' > /proc/acpi/call
-
-These work on my ASUS K52J notebook, but may not work for you. For a list of
-methods to try, see http://linux-hybrid-graphics.blogspot.com/ or try running
-the provided script `examples/turn_off_gpu.sh`
+The commands work on the [author](https://github.com/mkottman)'s ASUS K52J notebook, but may not work for you.
+See [linux-hybrid-graphics.blogspot.com](http://linux-hybrid-graphics.blogspot.com/) or try running the provided scripts (e.g. `examples/turn_off_gpu.sh`).
 
 It SHOULD be ok to test all of the methods, until you see a drop in battery
 drain rate (`grep rate /proc/acpi/battery/BAT0/state`), however it comes
 with NO WARRANTY - it may hang your computer/laptop, fail to work, etc.
+
+## Installation
+
+## Usage
+
+You can call acpi_call this way:
+
+```sh
+echo '<call>' | sudo tee /proc/acpi/call
+```
+
+You can then retrieve the result of the call by checking your dmesg or:
+
+```sh
+sudo cat /proc/acpi/call
+```
+
+An example to turn off discrete graphics card in a dual graphics environment
+(like NVIDIA Optimus):
+
+```sh
+# turn off discrete graphics card
+echo '\_SB.PCI0.PEG1.GFX0.DOFF' > /proc/acpi/call
+# turn it back on
+echo '\_SB.PCI0.PEG1.GFX0.DON' > /proc/acpi/call
+```
 
 You can pass parameters to `acpi_call` by writing them after the method,
 separated by single space. Currently, you can pass the following parameter
@@ -53,12 +66,14 @@ The status after a call can be read back from `/proc/acpi/call`:
 
 #### Graphic interface
 
-Found this too difficult? Try to use these programs provided by Marco Dalla Libera and do it via graphic interface:
+Found this too difficult? Try to use these programs provided by [Marco Dalla Libera](https://github.com/marcoDallas/) and do it via graphic interface:
 
 * [acpi_call_GUI (Ubuntu and other debian-based distributions)](http://marcodallas.github.io/acpi_call_GUI/)
 * [acpi_call_GUI_Fedora (Fedora version)](https://github.com/marcoDallas/acpi_call_GUI_Fedora)
 
 ***
+
+## Copyright
 
 Copyright (c) 2010: Michal Kottman
 
