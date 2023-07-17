@@ -48,30 +48,40 @@ You can pass parameters to `acpi_call` by writing them after the method,
 separated by single space. Currently, you can pass the following parameter
 types:
 
-* ACPI_INTEGER - by writing NNN or 0xNNN, where NNN is an integer/hex
-* ACPI_STRING - by enclosing the string in quotes: "hello, world"
-* ACPI_BUFFER - by writing bXXXX, where XXXX is a hex string without spaces,
+- ACPI_INTEGER - by writing NNN or 0xNNN, where NNN is an integer/hex
+- ACPI_STRING - by enclosing the string in quotes: "hello, world"
+- ACPI_BUFFER - by writing bXXXX, where XXXX is a hex string without spaces,
                 or by writing { b1, b2, b3, b4 }, where b1-4 are integers
 
 The status after a call can be read back from `/proc/acpi/call`:
 
-* 'not called' - nothing to report
-* 'Error: <description>' - the call failed
-* '0xNN' - the call succeeded, and returned an integer
-* '"..."' - the call succeeded, and returned a string
-* '{0xNN, ...}' - the call succeeded, and returned a buffer
-* '[...]' - the call succeeded, and returned a package which may contain the
+- 'not called' - nothing to report
+- 'Error: <description>' - the call failed
+- '0xNN' - the call succeeded, and returned an integer
+- '"..."' - the call succeeded, and returned a string
+- '{0xNN, ...}' - the call succeeded, and returned a buffer
+- '[...]' - the call succeeded, and returned a package which may contain the
    above types (integer, string and buffer) and other package types
 
 
-#### Graphic interface
+## Graphical interfaces
 
-Found this too difficult? Try to use these programs provided by [Marco Dalla Libera](https://github.com/marcoDallas/) and do it via graphic interface:
+If you found this too difficult for you or simply want a graphical experience give a try to these programs provided by [Marco Dalla Libera](https://github.com/marcoDallas/):
 
-* [acpi_call_GUI (Ubuntu and other debian-based distributions)](http://marcodallas.github.io/acpi_call_GUI/)
-* [acpi_call_GUI_Fedora (Fedora version)](https://github.com/marcoDallas/acpi_call_GUI_Fedora)
+- [acpi_call_GUI (Ubuntu and other debian-based distributions)](http://marcodallas.github.io/acpi_call_GUI/)
+- [acpi_call_GUI_Fedora (Fedora version)](https://github.com/marcoDallas/acpi_call_GUI_Fedora)
 
-***
+## Issues, Pull Requests and Contributions
+
+If you want to open an issue, propose a fix or just want to improve this kernel module overall, you have two choices:
+
+- Open an [Issue](https://github.com/alexis-opolka/acpi_call_made_easy/issues) or [Pull Request](https://github.com/alexis-opolka/acpi_call_made_easy/pulls) on this repository regarding changes concerning modifications made on this fork
+- Open an [Issue](https://github.com/mkottman/acpi_call/issues) or [Pull Request](https://github.com/mkottman/acpi_call/pulls) on the original repository regarding problems with the original code.
+
+  Please mention me (i.e. `@alexis-opolka`) if you open an issue on the original repository and want a fix to appear on my fork.
+  I will greatly appreciate it. ^-^
+
+---
 
 ## Copyright
 
