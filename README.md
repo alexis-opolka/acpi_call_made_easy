@@ -3,7 +3,7 @@
 A simple kernel module that enables you to call ACPI methods by writing the
 method name followed by arguments to `/proc/acpi/call`.
 
-acpi_call is used from the terminal, if you're afraid or simply want a graphical experience, [see the dedicated section below](https://github.com/mkottman/acpi_call/#graphic-interface).
+acpi_call is used from the terminal, if you're afraid or simply want a graphical experience, [see the dedicated section below](#graphic-interface).
 
 ## ⚠️ Caution ! ⚠️
 
