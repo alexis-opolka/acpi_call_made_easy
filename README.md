@@ -76,7 +76,7 @@ If you found this too difficult for you or simply want a graphical experience gi
 If you want to open an issue, propose a fix or just want to improve this kernel module overall, you have two choices:
 
 - Open an [Issue](https://github.com/alexis-opolka/acpi_call_made_easy/issues) or [Pull Request](https://github.com/alexis-opolka/acpi_call_made_easy/pulls) on this repository regarding changes concerning modifications made on this fork
-- Open an [Issue](https://github.com/mkottman/acpi_call/issues) or [Pull Request](https://github.com/mkottman/acpi_call/pulls) on the original repository regarding problems with the original code.
+- Open an [Issue](https://github.com/mkottman/acpi_call/issues) or [Pull Request](https://github.com/mkottman/acpi_call/pulls) on the [original repository](https://github.com/mkottman/acpi_call) regarding problems with the original code.
 
   Please mention me (i.e. `@alexis-opolka`) if you open an issue on the original repository and want a fix to appear on my fork.
   I will greatly appreciate it. ^-^
@@ -85,7 +85,9 @@ If you want to open an issue, propose a fix or just want to improve this kernel 
 
 ## Copyright
 
-Copyright (c) 2010: Michal Kottman
+Copyright &copy; 2010: Michal Kottman  
+Copyright &copy; [Biji](https://github.com/biji/)  
+Copyright &copy; 2023 Alexis Opolka
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
